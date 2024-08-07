@@ -1,0 +1,10 @@
+<section class="column" [ngStyle]="{'background-color': color}">
+    <h3>{{value}}</h3>
+    <div class="column">
+        @if(this.timer){
+        <button (click)="stopInterval()">STOP INTERVAL</button>
+        }@else {
+        <button (click)="activeInterval()">ACTIVE INTERVAL</button>
+        }
+    </div>
+</section>

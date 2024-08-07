@@ -1,0 +1,56 @@
+html,
+body {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'arial';
+}
+
+main,
+section {
+    min-width: 150px;
+    min-height: 150px;
+    text-align: center;
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+h3{
+    font-size: 1.9rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-wrapper {
+    height: 100%;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.folder {
+    min-height: 500px;
+}
+
+.example {
+    min-height: 330px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+button {
+    font-size: 120%;
+    margin-top: 5px;
+}
