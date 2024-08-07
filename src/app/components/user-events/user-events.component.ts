@@ -4,7 +4,7 @@ import { generateRandomColor } from '../../generateRandomColor';
 @Component({
   selector: 'app-user-events',
   templateUrl: './user-events.component.html',
-  // changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection : ChangeDetectionStrategy.OnPush
 })
 export class UserEventsComponent {
   

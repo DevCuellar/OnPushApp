@@ -4,12 +4,12 @@ import { generateRandomColor } from '../../../generateRandomColor';
 @Component({
   selector: 'app-inputs-presenter',
   templateUrl: './inputs-presenter.component.html',
-  // changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InputsPresenterComponent {
-  
+
   color = generateRandomColor();
-  @Input() value: number = 0;
+  @Input() value: { counter: number } = { counter: 0 };
 
   constructor(private ngZone: NgZone) {
     this.ngZone.onStable.subscribe(() => {

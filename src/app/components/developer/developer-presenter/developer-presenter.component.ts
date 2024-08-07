@@ -1,10 +1,10 @@
-import { ChangeDetectionStrategy, Component, NgZone } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, NgZone } from '@angular/core';
 import { generateRandomColor } from '../../../generateRandomColor';
 
 @Component({
   selector: 'app-developer-presenter',
   templateUrl: './developer-presenter.component.html',
-  // changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection : ChangeDetectionStrategy.OnPush
 })
 export class DeveloperPresenterComponent {
   
@@ -13,7 +13,7 @@ export class DeveloperPresenterComponent {
   value = 0;
   timer: any = null;
 
-  constructor(private ngZone: NgZone) {
+  constructor(private ngZone: NgZone, private cdr: ChangeDetectorRef) {
     this.ngZone.onStable.subscribe(() => {
       this.color = generateRandomColor();
     });
@@ -22,6 +22,7 @@ export class DeveloperPresenterComponent {
   activeInterval() {
     this.timer = setInterval(() => {
       this.value ++;
+      this.cdr.detectChanges();
     }, 1000);
   }
 

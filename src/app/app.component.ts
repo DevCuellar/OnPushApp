@@ -4,7 +4,7 @@ import { generateRandomColor } from './generateRandomColor';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  // changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection : ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
   

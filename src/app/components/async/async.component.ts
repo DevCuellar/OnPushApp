@@ -5,7 +5,7 @@ import { generateRandomColor } from '../../generateRandomColor';
 @Component({
   selector: 'app-async',
   templateUrl: './async.component.html',
-  // changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection : ChangeDetectionStrategy.OnPush
 })
 export class AsyncComponent {
 
